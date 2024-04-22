@@ -1,0 +1,240 @@
+/****** General ***********/
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+:root {
+    --main-color: #0065FC;
+    --main-bg-color: #F2F2F2;
+    --filter-bg-color: #DEEBFF;
+}
+
+.fa-solid {
+    color: var(--main-color);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.section-title {
+    margin: 0;
+    font-size: 22px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.card img {
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 16px;
+}
+
+.euro {
+    font-weight: 700;
+}
+
+.neutral-star {
+    color: var(--main-bg-color)
+}
+
+/****** Hebergements And Populaires ***********/
+.hebergements-and-populaires {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hebergements-and-populaires section {
+    background-color: var(--main-bg-color);
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/****** Hebergements ***********/
+.hebergements {
+    width: 65%;
+}
+
+/****** Populaires ***********/
+.populaires {
+    width: 32%;
+}
+
+.populaires-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.populaires-cards .card {
+    display: flex;
+    margin-top: 33px;
+}
+
+.populaires-cards img {
+    width: 33%;
+    height: 136px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.populaires-cards .card-content {
+    width: 67%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.populaires-cards .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.populaires-cards .card-subtitle {
+    margin: 0;
+}
+
+.populaires-cards .card-rating {
+    margin-bottom: 5px;
+}
+
+
+/* ? Début de Mes Modification */
+
+:root {
+    font-size: 16px;
+}
+
+/* * Début header */
+
+.header-logo img {
+    width: 61.09px;
+    height: 19px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between; /* répartis de manière égale sur toute la largeur */
+    align-items: center;
+    /* ! Margin et padding ne fonctionne pas pour mettre le header tous a gauche */
+}
+
+.header-nav {
+    display: flex;
+}
+
+.header-nav a {
+    margin-right: 68px; /* Espacement entre les liens */
+    text-decoration: none; /* Supprimer le soulignement par défaut */
+    color: #000; /* Couleur du texte par défaut */
+    position: relative; /* Position relative pour ajouter la bordure sur :hover */
+}
+
+.header-nav a:hover {
+    color: #0065FC; /* Couleur du texte lors du survol */
+}
+
+.header-nav a:hover::before {
+    content: ""; /* Contenu vide */
+    position: absolute; /* Position absolue pour se superposer au texte */
+    width: 100%; /* Largeur de la bordure */
+    height: 2px; /* Hauteur de la bordure */
+    background-color: #0065FC; /* Couleur de la bordure */
+    top: -14px; /* Décaler la bordure vers le haut */
+    left: 0; /* Aligner la bordure sur la gauche */
+}
+
+
+/* * Début footer */
+
+footer {
+    display: flex;
+    justify-content: space-between; /* Pour espacer également les sections */
+}
+
+.footer-a-propos,
+.footer-hebergement,
+.footer-assitance {
+    flex: 1; /* Pour que chaque section prenne la même largeur */
+    margin-right: 30px; /* Espacement entre les sections */
+}
+
+/* Pour éviter un espace à droite sur la dernière section */
+.footer-assitance {
+    margin-right: 0;
+}
+
+.liste-footer {
+    list-style-type: none; /* supprimer les puces */
+    padding: 0; /* définir l'espacement à l'intérieur d'un élément */
+    margin-bottom: 15px; 
+}
+
+/* ?   Fin de Mes Modification */
+
+
+
+/* Le code ci-dessous correspond à la version responsive uniquement */
+
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (max-width: 1024px) {
+    .hebergements-and-populaires {
+        flex-direction: column;
+    }
+
+    .hebergements {
+        width: 100%;
+    }
+
+    .populaires {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .populaires-cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .populaires-cards a {
+        width: 30%;
+    }
+
+    .populaires-cards .card-title {
+        font-size: 14px;
+    }
+
+    .populaires-cards .card-subtitle {
+        font-size: 13px;
+    }
+}
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+    /* ... */
+}
