@@ -62,12 +62,6 @@ header {
     height: 19px;
 }
 
-.header-top {
-    display: flex;
-    justify-content: space-between; /* répartis de manière égale sur toute la largeur */
-    align-items: center; 
-    height: 4rem;
-}
 
 .header-nav {
     display: flex;
@@ -82,23 +76,121 @@ header {
     position: relative; /* Position relative pour ajouter la bordure sur :hover */
 }
 
-.hebergement {
-    margin-right: 4.25rem; /* Espacement entre les liens */
-}
+
 
 .header-nav a:hover {
     color: #0065FC; /* Couleur du texte lors du survol */
 }
 
-.header-nav a:hover::before {
-    content: ""; /* Contenu vide */
-    position: absolute; /* Position absolue pour se superposer au texte */
-    width: 100%; /* Largeur de la bordure */
-    height: 2px; /* Hauteur de la bordure */
-    background-color: #0065FC; /* Couleur de la bordure */
-    top: -15px; /* Décaler la bordure vers le haut */
-    left: 0; /* Aligner la bordure sur la gauche */
+
+
+/****** Media queries ***********/
+
+/* Pc devices (Sup than 1025px) */
+@media (min-width: 1025px) {
+
+    .header-nav a:hover::before {
+        content: ""; /* Contenu vide */
+        position: absolute; /* Position absolue pour se superposer au texte */
+        width: 100%; /* Largeur de la bordure */
+        height: 2px; /* Hauteur de la bordure */
+        background-color: #0065FC; /* Couleur de la bordure */
+        top: -15px; /* Décaler la bordure vers le haut */
+        left: 0; /* Aligner la bordure sur la gauche */
+    }
+
+    .header-top {
+        display: flex;
+        justify-content: space-between; /* répartis de manière égale sur toute la largeur */
+        align-items: center; 
+        height: 4rem;
+    }
+
+    .hebergement {
+        margin-right: 4.25rem; /* Espacement entre les liens */
+    }
 }
+
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (min-width: 767.99px) and (max-width: 1024px) {
+    /* ... */
+
+    .header-nav a:hover::before {
+        content: ""; /* Contenu vide */
+        position: absolute; /* Position absolue pour se superposer au texte */
+        width: 100%; /* Largeur de la bordure */
+        height: 2px; /* Hauteur de la bordure */
+        background-color: #0065FC; /* Couleur de la bordure */
+        top: -15px; /* Décaler la bordure vers le haut */
+        left: 0; /* Aligner la bordure sur la gauche */
+    }
+
+    .header-top {
+        display: flex;
+        justify-content: space-between; /* répartis de manière égale sur toute la largeur */
+        align-items: center; 
+        height: 4rem;
+    }
+
+    .hebergement {
+        margin-right: 4.25rem; /* Espacement entre les liens */
+    }
+}
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+    /* ... */
+    
+    .header-top {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header-logo {
+        margin: 1.2rem auto;
+        
+    }
+
+    .header-nav {
+        display: flex;
+        justify-content: space-between; /* Espacer les éléments sur la ligne */
+        border-bottom: 3px solid #c7d0db;
+        padding-bottom: 0.8rem;
+    }
+
+    .hebergement,
+    .activite {
+        flex-basis: 50%; /* Diviser la largeur en deux */
+        text-align: center; /* Centrer le texte */
+    }
+
+    .header-nav a:hover::before {
+        content: ""; /* Contenu vide */
+        position: absolute; /* Position absolue pour se superposer au texte */
+        width: 100%; /* Largeur de la bordure */
+        height: 2.5px; /* Hauteur de la bordure */
+        background-color: #0065FC; /* Couleur de la bordure */
+        top: 2rem; /* Décaler la bordure vers le haut */
+        left: 0; /* Aligner la bordure sur la gauche */
+    }
+
+    .hebergement:hover::before {
+        left: -50%; /* Aligner la bordure sur la gauche */
+    }
+    .activite:hover::before {
+        left: 50%; /* Aligner la bordure sur la gauche */
+    }
+
+}
+
+
+
+
+
+
+
+
+
 
 /* ****************** Début NAV ******************/
 
@@ -116,28 +208,31 @@ header {
 }
 
 .section-recherche form {
-    flex-direction: row;
     display: flex;
+    flex-direction: row;
     align-items: center;
+    
 }
 
 .conteneur-formulaire svg {
     fill: #000000;  /* Changer la couleur de remplissage du SVG */
-    width: 4rem;
-    height: 4rem;
+    width: 3.5rem;
+    height: 3.2rem;
 }
 
 .conteneur-formulaire input {
     border: none; /* Retirer les bordures */
-    height: 3rem; /* Augmente la hauteur de l'input */
-    padding: 0.5rem; /* Ajoute un espace intérieur autour du contenu de l'input */
+    height: 3.2rem; /* Augmente la hauteur de l'input */
+    padding: 0.8rem; /* Ajoute un espace intérieur autour du contenu de l'input */
     font-size: 1rem; /* Augmente la taille de la police */
     font-weight: bold; /* Met le texte en gras */
+    border-top: 2px solid #F2F2F2;
+    border-bottom: 2px solid #F2F2F2;
 }
 
 .conteneur-btn-form button {
     height: 3rem; /* Augmente la hauteur du bouton */
-    padding: 2rem 1rem; /* Ajoute un espace intérieur au bouton */
+    padding: 3rem 1rem; /* Ajoute un espace intérieur au bouton */
 }
 
 #lieu {
@@ -145,7 +240,12 @@ header {
 }
 
 .btn-recherche-mobile {
+    background-color: #0065FC; /* Fond bleu */
     display: none;
+    border: none;
+    border-radius: 0.8rem; /* Coins droits arrondis */
+    padding: 1rem;
+    box-shadow: 0rem 0.2rem 0.5rem 0rem  #717275;
 }
 
 .btn-recherche-desktop {
@@ -156,6 +256,7 @@ header {
     border: 2px solid #0065FC;
     border-radius: 0 1rem 1rem 0; /* Coins droits arrondis */
     padding: 0.8rem 1.5rem;
+    height: 3.2rem; /* Augmente la hauteur du bouton */
 }
 
 .btn-recherche-desktop:hover {
@@ -164,18 +265,7 @@ header {
 
 
 
-/*  Infos Nav  */
-.info-nav {
-    display: flex;
-    align-items: center; /* Centre verticalement les éléments */
-}
 
-.info-nav svg {
-    width: 1rem; /* Réduire la largeur du SVG à 50% */
-    height: 0.75rem;
-    fill: #0065FC;  /* Changer la couleur de remplissage du SVG */
-    margin-right: 0.5rem;
-}
 
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
@@ -198,8 +288,11 @@ header {
 
 /* ****************** Début FILTRE  ******************/
 
-.conteneur-filtre {
+
+
+.les-filtres {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
 }
 
@@ -217,8 +310,8 @@ header {
     border-radius: 5rem; /* Ajoute une bordure arrondie */
     border: 2px solid #ccc; /* Ajoute une bordure solide grise de 1px */
     padding: 0px; /* Ajoute un espace intérieur pour séparer le contenu de la bordure */
-    margin-right: 0.8rem; /* Ajoute un espace à droite du h3 */
-    margin-left: 0.8rem; /* Ajoute un espace à gauche du SVG */
+    margin-right: 0.8rem; /* Ajoute un espace à droite du p */
+    margin-bottom: 1rem;
 }
 
 .icon-economique,
@@ -229,12 +322,13 @@ header {
 }
 
 
-.filtre-economique h3,
-.filtre-familial h3,
-.filtre-romantique h3,
-.filtre-pepites h3 {
-    margin-left: 0.7rem; /* Espacement entre le SVG et le titre h3 */
-    margin-right: 1.6rem; /* Ajoute un espace à droite du h3 */
+.filtre-economique p,
+.filtre-familial p,
+.filtre-romantique p,
+.filtre-pepites p {
+    margin-left: 0.7rem; /* Espacement entre le SVG et le titre p */
+    margin-right: 1.6rem; /* Ajoute un espace à droite du p */
+    font-weight: bold;
 }
 
 /* Style lorsque survolé */
@@ -247,9 +341,46 @@ header {
 
 /* Gestion des espaces membres entre les différentents éléments du block de Nav */
 .nav-description,
-.section-recherche,
-.conteneur-filtre {
+.section-recherche {
     margin-bottom: 1.8rem; /* Espacement */
+}
+
+
+
+
+/*  Infos Nav  */
+.info-nav {
+    display: flex;
+    align-items: center; /* Centre verticalement les éléments */
+}
+
+.info-nav svg {
+    width: 1rem; /* Réduire la largeur du SVG à 50% */
+    height: 0.75rem;
+    fill: #0065FC;  /* Changer la couleur de remplissage du SVG */
+    margin-right: 0.5rem;
+}
+
+
+/****** Media queries ***********/
+
+/* Pc devices (Sup than 1025px) */
+@media (min-width: 1025px) {
+
+    .conteneur-filtre {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (min-width: 767.99px) and (max-width: 1024px) {
+    /* ... */
+    }
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+    /* ... */
 }
 
 
