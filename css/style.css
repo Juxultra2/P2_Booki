@@ -42,11 +42,13 @@ h1 {
 }
 
 h2 {
-    font-size: 1.3em;
+    font-size: 1.4em;
 }
 
 h3 {
-    font-size: 1.1em;
+    font-size: 1em;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
 }
 
 
@@ -216,7 +218,7 @@ header {
 
 .conteneur-formulaire svg {
     fill: #000000;  /* Changer la couleur de remplissage du SVG */
-    width: 3.5rem;
+    
     height: 3.2rem;
 }
 
@@ -294,9 +296,12 @@ header {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    align-items: center;
 }
 
 .block-titre-filtre {
+    display: flex;
+    align-items: center; /* Centrer verticalement les éléments */
     margin-right: 1.5rem;
 }
 
@@ -311,14 +316,13 @@ header {
     border: 2px solid #ccc; /* Ajoute une bordure solide grise de 1px */
     padding: 0px; /* Ajoute un espace intérieur pour séparer le contenu de la bordure */
     margin-right: 0.8rem; /* Ajoute un espace à droite du p */
-    margin-bottom: 1rem;
 }
 
 .icon-economique,
 .icon-familial,
 .icon-romantique,
 .icon-pepites {
-    margin-left: 1.6rem; /* Ajoute un espace à gauche du SVG */
+    margin-left: 1.2rem; /* Ajoute un espace à gauche du SVG */
 }
 
 
@@ -326,9 +330,11 @@ header {
 .filtre-familial p,
 .filtre-romantique p,
 .filtre-pepites p {
-    margin-left: 0.7rem; /* Espacement entre le SVG et le titre p */
-    margin-right: 1.6rem; /* Ajoute un espace à droite du p */
+    margin-right: 0.5rem; /* Ajoute un espace à droite du p */
     font-weight: bold;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    padding: 0.8rem;
 }
 
 /* Style lorsque survolé */
@@ -336,7 +342,7 @@ header {
 .filtre-familial:hover,
 .filtre-romantique:hover,
 .filtre-pepites:hover {
-    background-color: #cccedc; /* Fond gris au survol */
+    background-color: #DEEBFF; /* Fond gris au survol */
 }
 
 /* Gestion des espaces membres entre les différentents éléments du block de Nav */
@@ -352,13 +358,18 @@ header {
 .info-nav {
     display: flex;
     align-items: center; /* Centre verticalement les éléments */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .info-nav svg {
-    width: 1rem; /* Réduire la largeur du SVG à 50% */
-    height: 0.75rem;
+    width: 0.8rem; /* Réduire la largeur du SVG à 50% */
+    height: 0.8rem;
     fill: #0065FC;  /* Changer la couleur de remplissage du SVG */
     margin-right: 0.5rem;
+    border: 2px solid #F2F2F2;
+    border-radius: 50%;
+    padding: 0.2rem;
 }
 
 
@@ -427,10 +438,67 @@ header {
     box-sizing: border-box;
 }
 
+
+
 /****** Hebergements ***********/
+
 .hebergements {
     width: 65%;
 }
+
+
+
+
+.hebergements-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.hebergements-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Pour répartir les cartes de manière égale */
+    
+}
+
+.hebergements-cards .card {
+    padding: 4px;
+    width: 15rem;
+    margin-bottom: 2rem;
+
+}
+
+.hebergements-cards img {
+    width: 100%; /* Redimensionner l'image pour s'adapter à la carte */
+    height: 8rem;
+    border-top-left-radius: 20px; /* Arrondir le coin supérieur gauche */
+    border-top-right-radius: 20px; /* Arrondir le coin supérieur droit */
+    
+}
+
+.hebergements-cards .card-content {
+    margin-left: 0.5rem;
+    padding-left: 0.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end; /* Déplacer le contenu de la carte en bas */
+    flex-direction: column;
+}
+
+.hebergements-cards .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.hebergements-cards .card-subtitle {
+    margin: 0;
+}
+
+.hebergements-cards .card-rating {
+    margin-bottom: 5px;
+}
+
 
 /****** Populaires ***********/
 .populaires {
@@ -477,6 +545,59 @@ header {
     margin-bottom: 5px;
 }
 
+/****** Activites ***********/
+
+
+.activites-title {
+    display: flex;
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+    margin-left: 2.5rem;
+}
+
+.activites-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Pour répartir les cartes de manière égale */
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.activites-cards .card {
+    width: 18rem;
+    margin-bottom: 2rem;
+    padding: 0px;
+
+}
+
+.activites-cards img {
+    width: 100%; /* Redimensionner l'image pour s'adapter à la carte */
+    height: 25rem;
+    border-top-left-radius: 20px; /* Arrondir le coin supérieur gauche */
+    border-top-right-radius: 20px; /* Arrondir le coin supérieur droit */
+    
+}
+
+.activites-cards .card-content {
+    
+    
+    display: flex;
+    
+    align-self: flex-end; /* Déplacer le contenu de la carte en bas */
+    
+}
+
+.activites-cards .card-title {
+    margin: 1.2rem;
+}
+
+.activites-cards .card-subtitle {
+    margin: 0;
+}
+
+.activites-cards .card-rating {
+    margin-bottom: 5px;
+}
 
 /* ? Début de Mes Modification */
 /* ****************** Début footer ******************/
@@ -484,6 +605,8 @@ header {
 footer {
     display: flex;
     justify-content: space-between; /* Pour espacer également les sections */
+    background-color: #F2F2F2; /* Couleur de fond */
+    margin-top: 2rem;
 }
 
 .footer-a-propos,
@@ -493,6 +616,14 @@ footer {
     margin-right: 30px; /* Espacement entre les sections */
 }
 
+.footer-a-propos {
+    margin-left: 1rem;
+}
+
+footer, li {
+    margin-top: 1rem;
+}
+
 /* Pour éviter un espace à droite sur la dernière section */
 .footer-assitance {
     margin-right: 0;
@@ -500,9 +631,10 @@ footer {
 
 .liste-footer {
     list-style-type: none; /* supprimer les puces */
-    padding: 0; /* définir l'espacement à l'intérieur d'un élément */
+    padding: 0rem; /* définir l'espacement à l'intérieur d'un élément */
     margin-bottom: 15px; 
 }
+
 
 /* ?   Fin de Mes Modification */
 
