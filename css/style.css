@@ -149,7 +149,7 @@ header {
     }
 
     .header-logo {
-        margin: 1.2rem auto;
+        margin: 1.8rem auto;
         
     }
 
@@ -181,6 +181,15 @@ header {
     }
     .activite:hover::before {
         left: 50%; /* Aligner la bordure sur la gauche */
+    }
+
+    .nav-description h1 {
+        margin-block-start: 0rem;
+        margin-block-end: 0rem;
+    }
+
+    .header-nav {
+        margin-bottom: 0rem;
     }
 
 }
@@ -286,6 +295,11 @@ header {
         display: block; /* Affiche le bouton sur les mobiles */
     }
 
+    .section-recherche {
+        justify-content: space-evenly;
+        
+    }
+
 }
 
 /* ****************** Début FILTRE  ******************/
@@ -388,11 +402,15 @@ header {
 @media (min-width: 767.99px) and (max-width: 1024px) {
     /* ... */
 
+    .block-titre-filtre {
+        margin-bottom: 0.8rem;
+    }
+
     .filtre-economique,
     .filtre-familial,
     .filtre-romantique,
     .filtre-pepites {
-        margin-right: 0rem;
+        margin-right: 0;
         transform: scale(0.8); /* Réduire la taille à 80% */
     }
 
@@ -402,7 +420,7 @@ header {
     }
 
     .filtre-economique p, .filtre-familial p, .filtre-romantique p, .filtre-pepites p {
-        margin-right: 0rem;
+        margin-right: 0;
     }
 
 }
@@ -415,13 +433,24 @@ header {
     .filtre-familial,
     .filtre-romantique,
     .filtre-pepites {
-        margin-left: 0rem;
-        transform: scale(0.8); /* Réduire la taille à 80% */
+        margin-right: 0rem;
+        transform: scale(0.9); /* Réduire la taille à 80% */
+        margin-top: 0.8rem;
+    }
+
+    .filtre-familial {
+        padding-right: 1.8rem;
     }
     
     .filtre-economique p, .filtre-familial p, .filtre-romantique p, .filtre-pepites p {
         margin-right: 0rem;
     }
+
+    .icon-economique, .icon-familial, .icon-romantique, .icon-pepites {
+        margin-left: 1rem;
+    }
+
+
 
 }
 
@@ -687,6 +716,16 @@ header {
         font-size: 0.8rem;
     }
 
+    .populaires-cards .card {
+        transform: scale(0.9); /* Réduire la taille en % */
+        width: 14rem;
+    }
+
+    .populaires-cards img {
+        width: 33%;
+        height: 7.2rem;
+    }
+
     .activites-title {
         margin-left: 1.5rem;
     }
@@ -719,25 +758,58 @@ header {
 @media (max-width: 767.98px) {
     /* ... */
 
+    .hebergements-and-populaires section {
+        border-radius: 0;
+        padding: 20px;
+    }
+
+    .hebergements-and-populaires {
+        flex-direction: column-reverse; /* Inverser l'ordre des sections */
+    }
+
+    .populaires {
+        background-color: var(--main-bg-color);
+    }
+
+    .populaires-title {
+        padding-top: 0.5rem;
+    }
+
+    .populaires-cards {
+        flex-direction: column;
+
+    }
+
+    .populaires-cards .card {
+        margin-top: 15px;
+    }
+
     .activites-title {
         margin-left: 2.5rem;
     }
 
     .hebergements-cards .card {
         padding: 4px;
-        width: 15rem;
-        margin-bottom: 2rem;
-    
+        width: 20rem;
+        margin-bottom: 1rem;
+    }
+
+    .hebergements {
+        width: 100%;
+    }
+
+    .hebergements-cards {
+        justify-content: space-evenly;
     }
 
     .activites-cards {
-        margin-left: 2rem;
-        margin-right: 2rem;
+        flex-direction: column;
+        align-content: center;
     }
 
     .activites-cards .card {
-        width: 8.5rem;
-        margin-bottom: 2rem;
+        width: 20rem;
+        margin-bottom: 1rem;
         padding: 0px;
     }
     
@@ -746,17 +818,11 @@ header {
         height: 10rem;
         border-top-left-radius: 20px; /* Arrondir le coin supérieur gauche */
         border-top-right-radius: 20px; /* Arrondir le coin supérieur droit */
-        
     }
 
     .activites-cards .card-title {
         margin: 0.8rem;
     }
-
-    .populaires {
-        background-color: var(--main-bg-color);
-    }
-
 
 }
 
@@ -804,7 +870,7 @@ footer, li {
 /* Le code ci-dessous correspond à la version responsive uniquement */
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
-@media (max-width: 1024px) {
+@media (min-width: 767.99px) and (max-width: 1024px) {
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -835,26 +901,41 @@ footer, li {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
+    .footer-a-propos, .footer-hebergement, .footer-assitance {
+        transform: scale(0.9); /* Réduire la taille en % */
+    }
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
     /* ... */
 
+    .populaires {
+        width: 100%;
+    }
+
+    .populaires-cards {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .populaires-cards .card-subtitle {
+        font-size: 13px;
+    }
+
     .main-container {
         padding: 0;
     }
 
-    .hebergements, .populaires, .conteneur-filtre {
+    .hebergements, .populaires, .nav {
         padding: 20px;
     }
 
-    .activite {
-        margin: 30px;
-    }
 
     footer {
         padding: 30px;
+        flex-direction: column;
     }
 
     .footer-a-propos {
