@@ -7,6 +7,9 @@
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
     --filter-bg-color: #DEEBFF;
+    --Grey-Tint2: #D9D9D9;
+    --Blue-Light: #DEEBFF;
+    --Black: #000;
     font-size: 16px;
 }
 
@@ -64,12 +67,12 @@ h4 {
 /* *****************  Header **************/
 
 header {
-    margin-bottom: 2rem; /* Ajouter une marge en bas */
+    margin-bottom: 1.875rem; /* Ajouter une marge en bas */
 }
 
 .header-logo img {
-    width: 61.09px;
-    height: 19px;
+    width: 3.81875rem;
+    height: 1.1875rem;
 }
 
 .header-nav {
@@ -85,7 +88,7 @@ header {
 }
 
 .header-nav a:hover {
-    color: #0065FC; /* Couleur du texte lors du survol */
+    color: var(--main-color); /* Couleur du texte lors du survol */
 }
 
 
@@ -112,6 +115,10 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
+    height: 49px;
+    border-top: 0.0625rem solid var(--main-bg-color);
+    border-bottom: 0.0625rem solid var(--main-bg-color);
+    border-radius: 0.9375rem;
     
 }
 
@@ -124,11 +131,19 @@ header {
 .conteneur-formulaire input {
     border: none; /* Retirer les bordures */
     height: 3.2rem; /* Augmente la hauteur de l'input */
-    padding: 0.8rem; /* Ajoute un espace intérieur autour du contenu de l'input */
-    font-size: 1rem; /* Augmente la taille de la police */
-    font-weight: bold; /* Met le texte en gras */
-    border-top: 2px solid #F2F2F2;
-    border-bottom: 2px solid #F2F2F2;
+    padding: 0.875rem; /* Ajoute un espace intérieur autour du contenu de l'input */
+    font-size: 1.125rem; /* Augmente la taille de la police */
+    color: var(--Black);
+    text-align: center;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.conteneur-formulaire input {
+    border-top: 0.0625rem solid var(--main-bg-color);
+    border-bottom: 0.0625rem solid var(--main-bg-color);
 }
 
 .conteneur-btn-form button {
@@ -141,27 +156,30 @@ header {
 }
 
 .btn-recherche-mobile {
-    background-color: #0065FC; /* Fond bleu */
+    background-color: var(--main-color); /* Fond bleu */
     display: none;
     border: none;
-    border-radius: 0.8rem; /* Coins droits arrondis */
-    padding: 1rem;
-    box-shadow: 0rem 0.2rem 0.5rem 0rem  #717275;
+    border-radius: 0.9375rem; /* Coins droits arrondis */
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-width: 0.5rem;
+    padding-block: 0.9375rem;
+    padding-inline: 1rem;
+    
 }
 
 .btn-recherche-desktop {
-    background-color: #0065FC; /* Fond bleu */
+    background-color: var(--main-color); /* Fond bleu */
     color: white; /* Texte blanc */
     font-size: 1rem;
     font-weight: bold;
-    border: 2px solid #0065FC;
+    border: 2px solid var(--main-color);
     border-radius: 0 1rem 1rem 0; /* Coins droits arrondis */
     padding: 0.8rem 1.5rem;
     height: 3.2rem; /* Augmente la hauteur du bouton */
 }
 
 .btn-recherche-desktop:hover {
-    background-color: #0052CC; /* Changement de couleur au survol */
+    background-color: #114ca6; /* Changement de couleur au survol */
 }
 
 
@@ -175,12 +193,23 @@ header {
     align-items: center;
 }
 
+.paire-filtres-haut,
+.paire-filtres-bas {
+    display: flex;
+    flex-direction: row;
+    height: 3rem;
+    margin-left: 0.9375rem;
+    gap: 0.9375rem;
+}
+
 .block-titre-filtre {
     display: flex;
     align-items: center; /* Centrer verticalement les éléments */
-    margin-right: 1.5rem;
 }
 
+.block-titre-filtre h3 {
+    font-size: 1.125rem
+}
 
 .filtre-economique,
 .filtre-familial,
@@ -188,29 +217,29 @@ header {
 .filtre-pepites {
     display: flex;
     align-items: center; /* Pour aligner les éléments verticalement */
-    border-radius: 5rem; /* Ajoute une bordure arrondie */
-    border: 2px solid #ccc; /* Ajoute une bordure solide grise de 1px */
-    padding: 0px; /* Ajoute un espace intérieur pour séparer le contenu de la bordure */
-    margin-right: 0.8rem; /* Ajoute un espace à droite du p */
+    border-radius: 1.5625rem; /* Ajoute une bordure arrondie */
+    border: 0.125rem solid var(--Grey-Tint2); /* Ajoute une bordure solide grise de 1px */
+    padding: 0.45rem 1.0625rem;
+    gap: 0.625rem;
 }
 
 .icon-economique,
 .icon-familial,
 .icon-romantique,
 .icon-pepites {
-    margin-left: 1.2rem; /* Ajoute un espace à gauche du SVG */
+    display: flex;
+    align-items: center;
 }
-
 
 .filtre-economique p,
 .filtre-familial p,
 .filtre-romantique p,
 .filtre-pepites p {
-    margin-right: 0.5rem; /* Ajoute un espace à droite du p */
-    font-weight: bold;
-    margin-block-start: 0em;
-    margin-block-end: 0em;
-    padding: 0.8rem;
+    font-size: 1.0625rem;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
 
 /* Style lorsque survolé */
@@ -218,13 +247,13 @@ header {
 .filtre-familial:hover,
 .filtre-romantique:hover,
 .filtre-pepites:hover {
-    background-color: #DEEBFF; /* Fond gris au survol */
+    background-color: var(--Blue-Light); /* Fond Blue-Light au survol */
 }
 
 /* Gestion des espaces membres entre les différentents éléments du block de Nav */
 .nav-description,
 .section-recherche {
-    margin-bottom: 2.19rem; /* Espacement */
+    margin-bottom: 2.1875rem; /* Espacement */
 }
 
 
@@ -238,15 +267,14 @@ header {
 }
 
 .info-nav svg {
-    width: 0.8rem; /* Réduire la largeur du SVG à 50% */
-    height: 0.8rem;
-    fill: #0065FC;  /* Changer la couleur de remplissage du SVG */
-    margin-right: 0.5rem;
-    border: 2px solid #F2F2F2;
-    border-radius: 50%;
-    padding: 0.2rem;
+    margin-right: 0.625rem;
 }
 
+.info-nav p {
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
 
 /****** Media queries ***********/
 
@@ -267,20 +295,12 @@ header {
         margin-bottom: 0.8rem;
     }
 
-    .filtre-economique,
-    .filtre-familial,
-    .filtre-romantique,
-    .filtre-pepites {
-        margin-right: 0;
-    }
-
-    .icon-economique, .icon-familial, .icon-romantique, .icon-pepites {
-        margin-left: 0rem;
-        padding-left: 0.8rem;
-    }
-
     .filtre-economique p, .filtre-familial p, .filtre-romantique p, .filtre-pepites p {
-        margin-right: 0;
+        font-size: 1rem;
+    }
+
+    .filtre-economique {
+        margin-left: 0;
     }
 
 }
@@ -500,9 +520,6 @@ footer a {
 
 
 
-
-
-
 /* Le code ci-dessous correspond à la version responsive uniquement */
 /****** Media queries Pc devices (Sup than 1025px) ***********/
 
@@ -661,8 +678,8 @@ footer a {
 
     /* ? Populaires */
 
-    .populaires-cards .card {
-        width: 12.5rem;
+    .populaires-cards a {
+        width: 32%;
     }
 
     .populaires-cards img {
@@ -703,6 +720,7 @@ footer a {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        width: 100%;
     }
 
     .populaires-cards .card-title {
@@ -719,6 +737,29 @@ footer a {
 }
 
 
+
+
+
+
+/****** Media queries Medium devices pour petite tablette (tablets de moin de 823px) ***********/
+
+/* Medium devices pour petite tablette */
+@media (min-width: 767.99px) and (max-width: 823px) {
+
+    .filtre-romantique {
+        margin-left: 0;
+    }
+
+    .les-filtres {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .paire-filtres-bas {
+        margin-top: 1.25rem;
+    }
+
+}
 
 
 
@@ -740,15 +781,15 @@ footer a {
     }
 
     .header-logo {
-        margin: 1.8rem auto;
+        margin: 1.875rem auto;
         
     }
 
     .header-nav {
         display: flex;
         justify-content: space-between; /* Espacer les éléments sur la ligne */
-        border-bottom: 3px solid #c7d0db;
-        padding-bottom: 0.8rem;
+        border-bottom: 0.125rem solid var(--Grey-Tint2);
+        padding-bottom: 0.9375rem;
     }
 
     .hebergement,
@@ -761,9 +802,9 @@ footer a {
         content: ""; /* Contenu vide */
         position: absolute; /* Position absolue pour se superposer au texte */
         width: 100%; /* Largeur de la bordure */
-        height: 2.5px; /* Hauteur de la bordure */
-        background-color: #0065FC; /* Couleur de la bordure */
-        top: 2rem; /* Décaler la bordure vers le haut */
+        height: 0.125rem; /* Hauteur de la bordure */
+        background-color: var(--main-color); /* Couleur de la bordure */
+        bottom: -1.075rem; /* Décaler la bordure vers le bas */
         left: 0; /* Aligner la bordure sur la gauche */
     }
 
@@ -775,8 +816,8 @@ footer a {
     }
 
     .nav-description h1 {
-        margin-block-start: 0rem;
-        margin-block-end: 0rem;
+        margin-block-start: 0;
+        margin-block-end: 0;
     }
 
     .header-nav {
@@ -801,26 +842,37 @@ footer a {
 
     /* ? Filtre Small */
 
+    .les-filtres {
+        flex-direction: column;
+        align-content: space-around;
+    }
+    
+    .filtre-economique,
+    .filtre-romantique {
+        margin-left: 0;
+    }
+
+    .paire-filtres-haut,
+    .paire-filtres-bas {
+        margin-top: 1.25rem;
+        width: 100%;
+        justify-content: center;
+        margin-left: 0;
+        gap: 0.625rem;
+    }
+
     .filtre-economique,
     .filtre-familial,
     .filtre-romantique,
     .filtre-pepites {
-        margin-right: 0rem;
-        transform: scale(0.9); /* Réduire la taille à 80% */
-        margin-top: 0.8rem;
+        width: 40%;
     }
 
-    .filtre-familial {
-        padding-right: 1.8rem;
-    }
-    
     .filtre-economique p, .filtre-familial p, .filtre-romantique p, .filtre-pepites p {
-        margin-right: 0rem;
+        font-size: 0.875rem;
     }
 
-    .icon-economique, .icon-familial, .icon-romantique, .icon-pepites {
-        margin-left: 1rem;
-    }
+
 
     /* ! Main */
 
@@ -828,12 +880,9 @@ footer a {
         padding: 0;
     }
 
-    .hebergements, .populaires, .nav {
-        padding: 20px;
-    }
-
-    .hebergements-and-populaires section {
-        border-radius: 0;
+    .hebergements, 
+    .populaires, 
+    .nav {
         padding: 20px;
     }
 
@@ -854,6 +903,11 @@ footer a {
 
     .hebergements-cards {
         justify-content: space-evenly;
+        flex-direction: column;
+    }
+
+    .hebergements-cards a {
+        width: 100%;
     }
 
     /* ? Populaires */
@@ -884,19 +938,10 @@ footer a {
 
     /* ? Activites */
 
-    .activites-title {
-        margin-left: 2.5rem;
-    }
-
     .activites-cards {
         flex-direction: column;
         align-content: center;
-    }
-
-    .activites-cards .card {
-        width: 20rem;
-        margin-bottom: 1rem;
-        padding: 0px;
+        gap: 0.9375rem;
     }
     
     .activites-cards img {
@@ -908,6 +953,10 @@ footer a {
 
     .activites-cards .card-title {
         margin: 0.8rem;
+    }
+
+    .activites-cards a {
+        width: 100%;
     }
 
     /* ! Footer */
