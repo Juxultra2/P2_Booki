@@ -124,14 +124,15 @@ header {
 
 .conteneur-formulaire svg {
     fill: #000000;  /* Changer la couleur de remplissage du SVG */
-    
-    height: 3.2rem;
+    min-width: 3.125rem;
+    width: 3.125rem;
+    background-color: #F2F2F2;
+    border-radius: 0.9375rem 0 0 0.9375rem;
 }
 
 .conteneur-formulaire input {
     border: none; /* Retirer les bordures */
     height: 3.2rem; /* Augmente la hauteur de l'input */
-    padding: 0.875rem; /* Ajoute un espace intérieur autour du contenu de l'input */
     font-size: 1.125rem; /* Augmente la taille de la police */
     color: var(--Black);
     text-align: center;
@@ -152,7 +153,7 @@ header {
 }
 
 #lieu {
-    align-self: center;
+    width: 100%;
 }
 
 .btn-recherche-mobile {
@@ -793,7 +794,7 @@ footer a {
     /* ! Nav */
     /* ? Formulaire */
     .btn-recherche-desktop {
-        display: none;
+        display: none; /* Masquer le bouton de recherche desktop */
     }
 
     .btn-recherche-mobile {
@@ -803,6 +804,21 @@ footer a {
     .section-recherche {
         justify-content: center;
     }
+
+    .section-recherche form {
+        width: 100%; /* Faire en sorte que le formulaire prenne toute la largeur disponible */
+        max-width: 480px;
+    }
+
+    .conteneur-formulaire {
+        width: 100%; /* Faire en sorte que le conteneur du formulaire prenne toute la largeur disponible */
+    }
+
+    .conteneur-formulaire input {
+        /* width: 100%; /* Faire en sorte que l'input prenne toute la largeur disponible */
+        box-sizing: border-box; /* Inclure le padding et les bordures dans la largeur totale */
+    }
+
 
     /* ? Filtre Small */
 
