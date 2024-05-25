@@ -165,7 +165,10 @@ header {
     border-width: 0.5rem;
     padding-block: 0.9375rem;
     padding-inline: 1rem;
-    
+}
+
+.btn-recherche-mobile:hover {
+    background-color: #114ca6; /* Changement de couleur au survol */
 }
 
 .btn-recherche-desktop {
@@ -889,7 +892,7 @@ footer a {
 
     .hebergements-cards a {
         width: 100%;
-        max-width: 580px;
+        max-width: 30rem;
     }
 
     /* ? Populaires */
