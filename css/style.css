@@ -286,7 +286,7 @@ header {
 .card {
     background-color: white;
     border-radius: 1.25rem;
-    filter: drop-shadow(0px 0.1875rem 0.9375rem rgba(0, 0, 0, 0.1));
+    filter: drop-shadow(0 0.1875rem 0.9375rem rgba(0, 0, 0, 0.1));
 }
 
 .card img {
@@ -408,7 +408,7 @@ header {
 }
 
 .populaires-cards .card-title {
-    margin-top: 10px;
+    margin-top: 0.625rem;
     margin-bottom: 0.25rem;
 }
 
@@ -417,7 +417,7 @@ header {
 }
 
 .populaires-cards .card-rating {
-    margin-bottom: 5px;
+    margin-bottom: 0.3125rem;
 }
 
 /****** Activites ***********/
@@ -574,8 +574,8 @@ footer a {
     .activites-cards img {
         width: 100%; /* Redimensionner l'image pour s'adapter à la carte */
         height: 23.75rem;
-        border-top-left-radius: 20px; /* Arrondir le coin supérieur gauche */
-        border-top-right-radius: 20px; /* Arrondir le coin supérieur droit */
+        border-top-left-radius: 1.25rem; /* Arrondir le coin supérieur gauche */
+        border-top-right-radius: 1.25rem; /* Arrondir le coin supérieur droit */
     }
 
     /* ! Footer */
@@ -622,7 +622,7 @@ footer a {
         margin-left: 0;
     }
 
-    /* Medium devices pour petite tablette (tablets de moins de 790px) */
+    /* Pour les petites tablettes (tablets de moins de 790px) */
     @media (max-width: 790px) {
 
         .filtre-romantique {
@@ -727,7 +727,7 @@ footer a {
     }
 
     .activites-cards .card-content {
-        height: 66px;
+        height: 4.125rem;
     }
 
     /* ! Footer */
@@ -810,7 +810,7 @@ footer a {
 
     .section-recherche form {
         width: 100%; /* Faire en sorte que le formulaire prenne toute la largeur disponible */
-        max-width: 480px;
+        max-width: 30rem;
     }
 
     .conteneur-formulaire {
@@ -849,7 +849,7 @@ footer a {
     .filtre-romantique,
     .filtre-pepites {
         width: 40%;
-        max-width: 150px;
+        max-width: 9.375rem;
     }
 
     .filtre-economique p, .filtre-familial p, .filtre-romantique p, .filtre-pepites p {
@@ -923,7 +923,7 @@ footer a {
 
     .populaires-cards a {
         width: 100%;
-        max-width: 550px;
+        max-width: 34.375rem;
     }
 
 
@@ -948,7 +948,7 @@ footer a {
 
     .activites-cards a {
         width: 100%;
-        max-width: 550px;
+        max-width: 34.375rem;
     }
 
     /* ! Footer */
