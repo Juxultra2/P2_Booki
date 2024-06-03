@@ -370,8 +370,8 @@ header {
 
 .hebergements-cards .card-title {
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    overflow: hidden; /* garantit que tout contenu qui dépasse les deux lignes sera coupé */
+    text-overflow: ellipsis; /* ajoute des points de suspension à la fin du texte si celui-ci est tronqué */
 }
 
 /****** Populaires ***********/
