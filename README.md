@@ -1,1 +1,5 @@
-# booki-starter-pack
+# booki
+
+Ce projet a été réalisé dans le cadre de ma formation, avec un focus sur la sémantique HTML, la mise en page responsive et l'optimisation des performances. L'objectif était de respecter une maquette Figma et d'assurer une navigation fluide sur tous les supports.
+L’un des principaux défis que j’ai rencontrés concernait l’adaptation du site en responsive. J’ai dû gérer les flexbox et les media queries pour assurer une mise en page harmonieuse, notamment sur les sections contenant plusieurs éléments alignés différemment selon la taille de l’écran. J’ai aussi rencontré des difficultés avec certaines marges et paddings qui ne s’ajustaient pas correctement, ce que j’ai résolu en affinant mon approche avec des unités relatives comme les pourcentages et les em/rem.
+Grâce à ce projet, j’ai consolidé mes compétences en structuration HTML, en mise en page avec CSS, et surtout en responsive design. J’ai appris à mieux organiser mon code et à optimiser l’affichage sur différents appareils, en respectant les bonnes pratiques d’accessibilité et d’ergonomie.
